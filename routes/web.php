@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\DataController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +24,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/beranda', [BerandaController::class,'index'])->middleware(['auth'])->name('beranda');
+Route::resources([
+    'data' => DataController::class
+]);
+Route::post('/importExcel', [DataController::class,'importExcel'])->middleware(['auth'])->name('import-excel');
 
 require __DIR__.'/auth.php';

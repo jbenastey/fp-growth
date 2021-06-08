@@ -8,12 +8,12 @@
             <ul class="metismenu" id="side-menu">
                 <li class="menu-title">Main</li>
                 <li>
-                    <a href="{{url('/home')}}" class="waves-effect">
+                    <a href="{{url('/beranda')}}" class="waves-effect">
                         <i class="ti-home"></i> <span> Beranda </span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{url('/')}}" class="waves-effect"><i class="fa fa-database"></i><span> Data </span></a>
+                    <a href="{{url('data')}}" class="waves-effect"><i class="fa fa-database"></i><span> Data </span></a>
                 </li>
                 <li>
                     <a href="{{url('/')}}" class="waves-effect"><i class="fa fa-table"></i><span> Data Atribut </span></a>
