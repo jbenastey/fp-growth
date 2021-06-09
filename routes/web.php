@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AtributController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\DataController;
 use Illuminate\Support\Facades\Route;
@@ -19,14 +20,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::middleware(['auth'])->group(function (){
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-Route::get('/beranda', [BerandaController::class,'index'])->middleware(['auth'])->name('beranda');
-Route::resources([
-    'data' => DataController::class
-]);
-Route::post('/importExcel', [DataController::class,'importExcel'])->middleware(['auth'])->name('import-excel');
+    Route::get('/beranda', [BerandaController::class,'index'])->name('beranda');
+    Route::resources([
+        'data' => DataController::class,
+        'atribut' => AtributController::class
+    ]);
+    Route::post('/importExcel', [DataController::class,'importExcel'])->name('import-excel');
+    Route::get('/loadAtribut', [AtributController::class,'loadAtribut'])->name('load-atribut');
+
+});
 
 require __DIR__.'/auth.php';

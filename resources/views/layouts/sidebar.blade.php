@@ -16,7 +16,7 @@
                     <a href="{{url('data')}}" class="waves-effect"><i class="fa fa-database"></i><span> Data </span></a>
                 </li>
                 <li>
-                    <a href="{{url('/')}}" class="waves-effect"><i class="fa fa-table"></i><span> Data Atribut </span></a>
+                    <a href="{{url('atribut')}}" class="waves-effect"><i class="fa fa-table"></i><span> Data Atribut </span></a>
                 </li>
                 <li>
                     <a href="{{url('/')}}" class="waves-effect"><i class="fa fa-chart-line"></i><span> FP-Growth </span></a>
