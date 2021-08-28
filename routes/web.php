@@ -3,6 +3,7 @@
 use App\Http\Controllers\AtributController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\PerhitunganController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,6 +34,8 @@ Route::middleware(['auth'])->group(function (){
     Route::post('/importExcel', [DataController::class,'importExcel'])->name('import-excel');
     Route::get('/loadAtribut', [AtributController::class,'loadAtribut'])->name('load-atribut');
 
+    Route::get('/perhitungan', [PerhitunganController::class,'index'])->name('perhitungan');
+    Route::post('/hitung', [PerhitunganController::class,'hitung'])->name('hitung');
 });
 
 require __DIR__.'/auth.php';

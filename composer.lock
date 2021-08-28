@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4de224a22c0013df36b28b53b9509ceb",
+    "content-hash": "73e7d89710e5a0fab3098992dc96f304",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -421,6 +421,43 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "enzomc/php-fpgrowth",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EnzoMC/php-fpgrowth.git",
+                "reference": "26c852b5531d4435eec3b89fdfef589e37c82d5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EnzoMC/php-fpgrowth/zipball/26c852b5531d4435eec3b89fdfef589e37c82d5e",
+                "reference": "26c852b5531d4435eec3b89fdfef589e37c82d5e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "isc",
+            "autoload": {
+                "psr-4": {
+                    "EnzoMC\\PhpFPGrowth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Ivan Rebrov",
+                    "email": "rebrvivan95@gmail.com"
+                }
+            ],
+            "description": "PHP implementation of the Frequent Pattern Growth algorithm",
+            "support": {
+                "issues": "https://github.com/EnzoMC/php-fpgrowth/issues",
+                "source": "https://github.com/EnzoMC/php-fpgrowth/tree/master"
+            },
+            "time": "2019-06-17T19:02:56+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
